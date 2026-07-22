@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Element Selector</title>
+    <!-- Internal CSS -->
+
+    <style>
+        h1::before {
+            content: "~ ";
+            color: red;
+        }
+
+        h1::after {
+            content: " !";
+            color: red;
+        }
+
+        p::first-letter {
+            font-size: 50px;
+            color: blue;
+        }
+        p::first-line {
+            font-size: 20px;
+            color: green;
+        }
+        body::selection{
+            background-color: yellow;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pseudo-Element Selector</h1>
+
+    <hr>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum illum modi quibusdam quasi consequuntur tempora
+        velit mollitia accusantium dignissimos at! Lorem i hjbhhj   explicabo reprehenderit exercitationem mollitia, ipsum obcaecati! Ea eaque commodi repellendus.</p>
+</body>
+
+</html>

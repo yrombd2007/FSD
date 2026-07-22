@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Class Selector</title>
+    <!-- Internal CSS  -->
+    <style>
+        button {
+            background-color: gold;
+            color: black;
+            font-family: Arial, sans-serif;
+            padding: 10px 20px;
+            border: 2px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            border: 5px solid red;
+            border-radius: 10px;
+        }
+        a:active {
+            color: red;
+        }
+        a:visited{
+            color: green;
+        }
+        a{
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo-Class Selector</h1>
+    <hr>
+    <button>Hover Me</button>
+    <hr>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes"
+        target="_blank">Pseudo-Class Selector</a>
+</body>
+</html>

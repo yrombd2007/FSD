@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Sibling Selector</title>
+
+
+    <!-- Internal CSS  -->
+
+    <style>
+         .parent{
+            border: 5px solid green;
+        }
+        .parent ~ p {
+            background-color: gold;
+            color: black;
+            font-family: Arial, sans-serif;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>General Sibling` Selector (~)</h1>
+
+    <hr>
+    <div class="parent">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptates?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptates?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptates?</p>
+        <div class="child">
+            <p>Child 1</p>
+            <p>Child 2</p>
+            <p>Child 3</p>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptates?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptates?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptates?</p>
+
+        <div class="child">
+            <p>Child 4</p>
+            <p>Child 5</p>
+            <p>Child 6</p>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptates?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptates?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptates?</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptates?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptates?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptates?</p>
+
+</body>
+
+</html> 
