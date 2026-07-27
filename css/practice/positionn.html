@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position</title>
+    <!-- Internal CSS  -->
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div[class*="box"]{
+            height: 500px;
+            border: 5px dashed green;
+            margin: 20px ;
+            font-size: 30px;
+        }
+        div[class*="box-ab"]{
+            height: 250px;
+            width: 250px;
+            margin: 0px;
+            border: 5px dashed orangered;
+            position: absolute;
+        }
+        .fixed{
+            position: fixed;
+            background-color: black;
+            color: aliceblue;
+            top: 0px;
+            right: 0px;
+            z-index: 100;
+        }
+        .sticky{
+            background-color: gold;
+            color: black;
+            text-align: center;
+            border: 2px solid red ;
+            position: sticky;
+            top: 0;
+        }
+        .box-5{
+            position: relative;
+            overflow: hidden;
+        }
+        /* .box-ab-1{
+            background-color: lightblue;
+            top: 0px;
+            left: 0px;
+        }
+        .box-ab-2{
+            background-color: lightcoral;
+            top: 0px;
+            right: 0px;
+        }
+        .box-ab-3{
+            background-color: lightgreen;
+            bottom: 0px;
+            left: 0px;
+        }
+        .box-ab-4{
+            background-color: lightsalmon;
+            bottom: 0px;
+            right: 0px;
+        } */
+         .box-4{
+            position: relative;
+            z-index: 2;
+            background-color: brown;
+         }
+        .box-ab-1{
+            background-color: lightblue;
+            top: -100px;
+            left: 500px;
+            /* left: 50%; */
+            z-index: 1;
+        }
+        .box-ab-2{
+            background-color: lightcoral;
+            top: 100px;
+            right: -100px;
+        }
+        .box-ab-3{
+            background-color: lightgreen;
+            top: 90px;
+            left: 90px;
+            z-index: 2;
+        }
+        .box-ab-4{
+            background-color: lightsalmon;
+            top: 120px;
+            left: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-1">Box -1
+        <div class="fixed"><img src="../images/image.png"></div>
+    </div>
+    <div class="box-2">Box -2</div>
+    <div class="box-3">Box -3
+        <div class="sticky">
+            <img src="../images/image.png">
+        </div>
+    </div>
+    <div class="box-4">Box -4</div>
+    <div class="box-5">Box -5
+ 
+    </div>
+</body>
+</html>
