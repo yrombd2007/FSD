@@ -1,0 +1,860 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.pg1{
+    background-image: url(../foodie-css-website/Image.png);
+    /* background-size: cover; */
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 800px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+    margin-top: 40px;
+
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Lato";
+}
+
+.text1{
+    font-size: 220px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Grand Hotel";
+    text-align: center;
+
+    margin-top: 20px;
+}
+
+.text2{
+    width: 90%;
+    max-width: 900px;
+
+    margin-bottom: 20px;
+    margin-left: 250px;
+
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Lato";
+    text-align: center;
+    line-height: 1.5;
+}
+
+.button{
+    width: 322px;
+    height: 65px;
+
+    margin: 40px auto 0;
+
+    border-radius: 32px;
+    background-color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #e8565e;
+    font-weight: 700;
+    font-family: "Lato";
+}
+
+.pg2{
+    background-image: url(../foodie-css-website/pg2.png);
+    /* background-size: cover; */
+    /* background-position: center;
+    background-repeat: no-repeat; */
+height: 1050px;
+    width: 100%;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+/* Heading */
+.text3{
+    font-size: 120px;
+    color: #e8565e;
+    font-weight: 400;
+    font-family: "Grand Hotel";
+    text-align: center;
+}
+
+.text4{
+    max-width: 900px;
+    width: 90%;
+    margin: 20px auto 80px;
+
+    font-size: 28px;
+    color: #333333;
+    font-family: "Lato";
+    text-align: center;
+    line-height: 1.6;
+}
+
+.img1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    /* flex-wrap: wrap; */
+}
+
+.img1 img{
+    width: 250px;
+    height: 250px;
+    /* object-fit: cover; */
+}
+
+
+.label{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 95px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+
+.x,
+.y,
+.z{
+    font-size: 55px;
+    color: #e8565e;
+    font-family: "Grand Hotel";
+    text-align: center;
+    line-height: 1;
+}
+
+.y{
+    margin-left: 120px;
+    position: relative;
+    right: 30px;
+}
+.x{
+    margin-left: 150px;
+}
+
+.z{
+   
+    position: relative;
+    left: 120px;
+   
+}
+
+.p,
+.q,
+.r{
+    width: 250px;
+    font-size: 20px;
+    color: #333333;
+    font-family: "Lato";
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+.p{
+    margin-left: 180px;
+}
+.q{
+    
+    position: relative;
+    left: 50px;
+}
+.r{
+    position: relative;
+    top: 100px;
+    right: 150px;
+}
+
+
+
+.pg3{
+    background-image: url(../foodie-css-website/pg3.png);
+    /* background-size: cover; */
+    background-position: center;
+    /* background-repeat: no-repeat; */
+
+    width: 100%;
+    min-height: 900px;
+
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+
+.text7{
+    font-size: 120px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Grand Hotel";
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+
+.pg3 .text2{
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto 80px;
+
+    font-size: 28px;
+    color: #ffffff;
+    font-family: "Lato";
+    text-align: center;
+    line-height: 1.6;
+}
+
+
+.circlepg3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    /* flex-wrap: wrap; */
+}
+
+
+.circle{
+    width: 280px;
+    height: 280px;
+
+    border: 5px dashed #ffffff;
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text8{
+    font-size: 60px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Lato";
+    margin-bottom: 10px;
+}
+
+.text9{
+    font-size: 38px;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Lato";
+    text-align: center;
+}
+
+
+.pg4{
+    background-image: url(../foodie-css-website/pg4.png);
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+
+    width: 100%;
+    padding: 80px 0 100px;
+    overflow: hidden;
+}
+
+
+.pg4 .text3{
+    font-size: 120px;
+    color: #e8565e;
+    font-family: "Grand Hotel";
+    text-align: center;
+}
+
+
+.pg4 .text4{
+    max-width: 900px;
+    width: 90%;
+    margin: 20px auto 80px;
+
+    font-size: 28px;
+    color: #333333;
+    font-family: "Lato";
+    text-align: center;
+    line-height: 1.6;
+}
+
+
+.flex1{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+
+.flex2{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+    /* flex-wrap: wrap; */
+}
+
+.flex3,
+.flex4,
+.flex5,
+.flex6{
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    width: 500px;
+}
+
+
+.flex3 img,
+.flex4 img,
+.flex5 img,
+.flex6 img{
+    width: 90px;
+    height: 90px;
+}
+
+.text10{
+    font-size: 50px;
+    color: #eb4d55;
+    font-family: "Grand Hotel";
+    margin-bottom: 10px;
+}
+
+
+.text11{
+    font-size: 20px;
+    color: #3d3d3d;
+    font-family: "Lato";
+    line-height: 1.6;
+    max-width: 350px;
+}
+
+
+.flex8{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+.pg51{
+    flex: 1;
+}
+
+.pg51 img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.pg52{
+    flex: 1;
+    min-height: 915px;
+
+    background-image: url(../foodie-css-website/pg5.2.png);
+    /* background-size: cover;
+    background-position: center; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 60px;
+}
+
+
+.flex7{
+    max-width: 520px;
+}
+
+
+.text12{
+    font-size: 95px;
+    color: #eb4d55;
+    font-family: "Grand Hotel";
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+
+.text13{
+    font-size: 28px;
+    color: #3d3d3d;
+    font-family: "Lato";
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+
+.button1{
+    width: 300px;
+    height: 65px;
+
+    background: #eb4d55;
+    border-radius: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "Lato";
+    color: white;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button1:hover{
+    background: #d83d45;
+}
+
+
+.pg6{
+    background-image: url(../foodie-css-website/pg4.png);
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+
+    width: 100%;
+    padding: 80px 0 100px;
+    overflow: hidden;
+}
+
+
+.text14{
+    font-size: 110px;
+    color: #eb4d55;
+    font-family: "Grand Hotel";
+    text-align: center;
+}
+
+
+.text15{
+    max-width: 900px;
+    width: 90%;
+    margin: 20px auto 70px;
+
+    font-size: 28px;
+    color: #3d3d3d;
+    font-family: "Lato";
+    text-align: center;
+    line-height: 1.6;
+}
+
+
+.flex9{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+
+.box1,
+.box2,
+.box3{
+    width: 360px;
+    min-height: 500px;
+
+    background: #faf5e4;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 40px 25px;
+}
+
+
+.xx{
+    margin-bottom: 25px;
+}
+
+.xx img{
+    width: 90px;
+    height: 90px;
+}
+
+.text16{
+    font-size: 46px;
+    color: #eb4d55;
+    font-family: "Grand Hotel";
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.text17{
+    font-size: 20px;
+    color: #3d3d3d;
+    font-family: "Lato";
+    text-align: center;
+    line-height: 1.6;
+
+    margin-bottom: 35px;
+}
+
+
+.button2,
+.button3,
+.button4{
+    width: 260px;
+    height: 60px;
+
+    background: #eb4d55;
+    border-radius: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 22px;
+    font-family: "Lato";
+    font-weight: 700;
+
+    margin-top: auto;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.button2:hover,
+.button3:hover,
+.button4:hover{
+    background: #d63d45;
+}
+
+
+.pg71{
+    background-image: url(../foodie-css-website/pg7:1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    min-height: 900px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.pg71 section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.yyy{
+    margin-bottom: 40px;
+}
+
+.yyy img{
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 200px;
+    margin-right: 1200px;
+}
+
+.text18{
+    max-width: 900px;
+    width: 90%;
+
+    font-size: 34px;
+    line-height: 1.7;
+
+    color: #3d3d3d;
+    font-weight: 700;
+    font-family: "Lato";
+
+    margin-bottom: 35px;
+}
+
+
+.text19{
+    font-size: 75px;
+    color: #eb4d55;
+    font-family: "Grand Hotel";
+    position: relative;
+    top: 250px;
+}
+
+.pg72{
+    width: 100%;
+    overflow: hidden;
+}
+
+.pg72 img{
+    width: 100%;
+    display: block;
+}
+
+
+.pg8{
+    background-image: url(../foodie-css-website/pg4.png);
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+
+    width: 100%;
+    min-height: 650px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 80px 20px;
+    overflow: hidden;
+}
+
+.text20{
+    font-size: 110px;
+    color: #eb4d55;
+    font-family: "Grand Hotel";
+    text-align: center;
+}
+
+.text21{
+    max-width: 850px;
+    width: 90%;
+
+    margin: 20px auto 60px;
+
+    font-size: 28px;
+    color: #3d3d3d;
+    font-family: "Lato";
+    text-align: center;
+    line-height: 1.6;
+}
+
+
+.flex10{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+}
+
+
+.form{
+    width: 600px;
+    max-width: 90vw;
+    height: 65px;
+
+    background: #ffffff;
+    border-radius: 35px;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 30px;
+
+    font-size: 22px;
+    color: #777;
+    font-family: "Lato";
+}
+
+.button5{
+    width: 220px;
+    height: 65px;
+
+    background: #eb4d55;
+    border-radius: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    font-family: "Lato";
+position: relative;
+right: 200px;
+    /* cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    right: 150px; */
+}
+
+.button5:hover{
+    background: #d63d45;
+}
+
+
+.pg9{
+    background-image: url(../foodie-css-website/pg9.png);
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+
+    width: 100%;
+    padding: 80px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* flex-wrap: wrap; */
+    gap: 60px;
+}
+
+
+.text22{
+    font-size: 60px;
+    color: #ffffff;
+    font-family: "Grand Hotel";
+    margin-bottom: 20px;
+    position: relative;
+    bottom: 200px;
+
+}
+
+.text23{
+    max-width: 350px;
+    font-size: 22px;
+    line-height: 1.8;
+    color: #ffffff;
+    font-family: "Lato";
+}
+
+.text24,
+.text26,
+.text28{
+    font-size: 42px;
+    color: #ffffff;
+    font-family: "Grand Hotel";
+    margin-bottom: 20px;
+    position: relative;
+    top: 100px;
+}
+
+.a,
+.text27,
+.text29{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    font-size: 22px;
+    color: #ffffff;
+    font-family: "Lato";
+    position: relative;
+    top: 100px;
+}
+
+
+.text29{
+    display: none;
+    position: relative;
+    top: 100px;
+
+}
+
+
+.text30{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+.face,
+.twi,
+.what{
+    /* position: static; */
+    position: relative;
+    top: 100px;
+    display: flex;
+    font-size: 23px;
+line-height: 41px;
+color: #ffffff;
+font-weight: 400;
+font-family: "Nunito";
+gap: 20px;
+}
+.ig{
+     position: relative;
+    top: 100px;
+    display: flex;
+    font-size: 23px;
+line-height: 41px;
+color: #ffffff;
+font-weight: 400;
+font-family: "Nunito";
+gap: 20px;
+}
+
+.text30 img{
+    width: 35px;
+    height: 35px;
+    display: block;
+}
+
+
+@media (max-width: 900px){
+
+    .pg9{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text23{
+        max-width: 90%;
+    }
+
+    .text30{
+        flex-direction: row;
+        justify-content: center;
+         position: relative;
+    top: 100px;
+    }
+}
+
+ 
