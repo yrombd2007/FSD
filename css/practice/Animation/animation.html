@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<style>
+    .box{
+        width: 200px;
+        height: 200px;
+        background-color: violet;
+        border-radius: 10px;
+        border: 2px solid transparent;
+        animation-name: move;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes move{
+        0%{
+margin-top: 0px;
+margin-left: 0px;
+        }
+
+        25%{
+margin-top: 0px;
+margin-left:  1250px;
+        }
+        
+        50%{
+margin-top: 600px;
+margin-left:  1250px;
+        }
+        
+        75%{
+margin-top: 600px;
+
+margin-left: 0px;
+        }
+        100%{
+margin-top: 0px;
+margin-left: 0px;
+        }
+        
+
+    }
+</style>
+</head>
+
+
+<body>
+    <div class="box"></div>
+
+
+</body>
+</html>
