@@ -1,0 +1,60 @@
+ *{
+            background-color: black;
+            color: white;
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            /* overflow: hidden; */
+        }
+
+        .nav1{
+            display: flex;
+            position: relative;
+            top: 50px;
+        }
+
+        .nav2{
+            display: flex;
+            position: relative;
+            left: 1200px;
+            /* bottom: 100px; */
+            
+        }
+
+
+        /* hr{
+            color: white;
+        } */
+
+        .hero1{
+            position: relative;
+            top: 200px;
+        }
+        .hero2{
+             position: relative;
+            top: 140px;
+            left: 700px;
+        }
+
+          .hero3{
+             position: relative;
+            top: 70px;
+            left: 1100px;
+        }
+        .logos{
+            height: 300px;
+            width: 1455px;
+            position: relative;
+            top: 250px;
+        }
+        
+        .pg2{
+            position: relative;
+            top: 400px;
+        }
+
+
+        .p3{
+            position: relative;
+            top: 100px;
+        }
