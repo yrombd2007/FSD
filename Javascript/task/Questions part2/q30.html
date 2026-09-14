@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    function analyzeSales(salesperson, monthlySales, target = 100000) {
+
+        let percentage = (monthlySales / target) * 100;
+
+        if (percentage >= 100) {
+            console.log(
+                "Performance:", "Excellent",
+                "Salesperson:", salesperson,
+                "Monthly Sales:", monthlySales,
+                "Target:", target,
+                "Target Achieved:", percentage
+            );
+        }
+        else if (percentage >= 80) {
+            console.log(
+                "Performance:", "Good",
+                "Salesperson:", salesperson,
+                "Monthly Sales:", monthlySales,
+                "Target:", target,
+                "Target Achieved:", percentage
+            );
+        }
+        else if (percentage >= 50) {
+            console.log(
+                "Performance:", "Average",
+                "Salesperson:", salesperson,
+                "Monthly Sales:", monthlySales,
+                "Target:", target,
+                "Target Achieved:", percentage
+            );
+        }
+        else {
+            console.log(
+                "Performance:", "Needs Improvement",
+                "Salesperson:", salesperson,
+                "Monthly Sales:", monthlySales,
+                "Target:", target,
+                "Target Achieved:", percentage
+            );
+        }
+    }
+
+    analyzeSales("om", 90000);
+</script>
+
+</body>
+</html>

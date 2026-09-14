@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get InpData</title>
+
+
+    
+        <!-- Bootstrap CSS  -->
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
+          <style>
+        .body{
+            border: 5px solid black;
+            width: 98%;
+            height: 500px;
+            background-color: yellow;
+
+
+
+
+
+        }
+        .n1{
+            border: 5px solid black;
+            width: 400px;
+            height: 50px;
+position: relative;
+top: 100px;
+left: 320px;
+text-align: center;
+line-height: 50px;
+background-color: lightpink;
+
+        }
+          .n2{
+            border: 5px solid black;
+            width: 400px;
+            height: 50px;
+position: relative;
+top: 200px;
+left: 520px;
+text-align: center;
+line-height: 50px;
+background-color: lightskyblue;
+
+        }
+.flex{
+    justify-content: center;
+    display: flex;
+gap: 10px;
+
+}
+.o{
+         border: 5px solid black;
+            width: 100px;
+            height: 50px;
+position: relative;
+top: 120px;
+text-align: center;
+line-height: 50px;
+background-color: lightgreen;
+
+}
+.o button{
+    background-color: lightsalmon;
+}
+.submit{
+    position: relative;
+    top: 150px;
+    left: 700px;
+}
+
+        
+    </style>
+        
+</head>
+
+<body >
+    <main class="body">
+
+    <input  class="n1"type="text" id="inp1" placeholder="Enter your Num1">
+    <input type="text" class="n1"id="inp2" placeholder="Enter your Num2">
+
+      <section class="flex">
+            <div class="o"> <button onclick="add()"  id="plus" >+</button></div>
+            <div  class="o"> <button onclick="sub()"  id="minus">-</button></div>
+
+            <div  class="o"> <button onclick="multi()"  id="mul">*</button></div>
+            <div  class="o"> <button  onclick="div()" id="div">/</button></div>
+
+        </section>
+
+
+    <h2 id="res" class="n2"></h2>
+    </main>
+
+
+    <script>
+
+
+        let res = document.getElementById("res");
+        function add() {
+            let inp1 = parseInt(document.getElementById("inp1").value);
+            let inp2 = parseInt(document.getElementById("inp2").value);
+
+            // alert(inp1);
+            // console.log(inp1);
+            // document.write(inp1);
+            res.innerText = inp1+inp2;
+
+        }
+             function sub() {
+           let inp1 = parseInt(document.getElementById("inp1").value);
+            let inp2 = parseInt(document.getElementById("inp2").value);
+            // alert(inp1);
+            // console.log(inp1);
+            // document.write(inp1);
+            res.innerText = inp1-inp2;
+
+        }
+             function multi() {
+     let inp1 = parseInt(document.getElementById("inp1").value);
+            let inp2 = parseInt(document.getElementById("inp2").value);
+            // alert(inp1);
+            // console.log(inp1);
+            // document.write(inp1);
+            res.innerText = inp1*inp2;
+
+        }
+             function div() {
+     let inp1 = parseInt(document.getElementById("inp1").value);
+            let inp2 = parseInt(document.getElementById("inp2").value);
+            // alert(inp1);
+            // console.log(inp1);
+            // document.write(inp1);
+            res.innerText = inp1/inp2;
+
+        }
+    </script>
+</body>
+
+</html>

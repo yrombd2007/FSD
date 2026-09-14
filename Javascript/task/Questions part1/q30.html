@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Bonus</title>
+</head>
+<body>
+
+    <script>
+        let salary = 50000;
+        let experience = 6;
+        let rating = 9;
+
+        switch (true) {
+            case (experience >= 5 && rating >= 8):
+                console.log("20% bonus");
+                console.log("Bonus amount:", salary * 0.20);
+                break;
+
+            case (experience >= 3 && rating >= 7):
+                console.log("15% bonus");
+                console.log("Bonus amount:", salary * 0.15);
+                break;
+
+            case (experience >= 1 && rating >= 6):
+                console.log("10% bonus");
+                console.log("Bonus amount:", salary * 0.10);
+                break;
+
+            default:
+                console.log("No bonus");
+        }
+    </script>
+
+</body>
+</html>
