@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       
+    }
+    body{
+         background-image: url(./images/top-view-red-pen-notepad-with-small-bow-pine-tree-branch-dark-red-surface-with-copy-place.jpg) ;
+        background-position: center center;
+        background-size: cover;
+        background-position-y: 0px;
+    }
+    input{
+padding: 15px 300px;
+border: 1px solid ;
+border-radius: 20px;
+font-size: medium;
+margin-top: 50px;
+    }
+.header img{
+position: relative;
+top: 15px;
+    }
+    .header{
+margin-left: 100px;
+margin-top: 30px;
+color: white;
+word-spacing: 15px;
+    }
+    button{
+        border: 1px solid ;
+        border-radius: 20px;
+        background-color: white;
+position: relative;
+top: 50px;
+        height: 50px;
+        width: 200px;
+    }
+    .flex{
+        display: flex;
+        gap: 50px;
+        margin-left: 100px;
+    }
+    #box{
+    margin-left: 100px;
+    margin-top: 50px;
+    width: 900px;
+}
+
+#box .task{
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 850px;
+    height: 45px;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 30px;
+    background-color: rgb(255, 240, 153);
+    color: black;
+    font-weight: bolder;
+    border-color: transparent;
+    margin-top: 20px;
+    position: relative;
+    top: 40px;
+
+}
+#btn{
+    background-color: green;
+    border-color: transparent;
+    color: white;
+    font-weight: bolder;
+}
+/* .button{
+    position: relative;
+    left: 1200px;
+    bottom: 400px;
+    margin-bottom: 200px;
+} */
+ .task button{
+margin-bottom: 100px;
+ }
+ .task{
+    /* position: relative;
+    bottom: 100px; */
+ }
+ .bt{
+     position: relative;
+    bottom: 80px;
+    left: 350px;
+    gap: 10px;
+ }
+ .bt button{
+width: 200px;
+height: 46px;
+border: 1px solid  rgb(112, 109, 109);
+font-size: large;
+font-weight: bolder;
+
+
+ }
+ .bt1{
+    background-color: white;
+    color: blue;
+
+ }
+ .bt2{
+    background-color: white;
+    color: red;
+ }
+ #heading{
+    border: 1px solid transparent;
+    border-radius: 10px;
+    width: 400px;
+    height: 40px;
+    background-color: white;
+    position: relative;
+    left: 200px;
+top: 50px;
+line-height: 40px;
+text-align: center;
+ }
+</style>
+
+
+</head>
+<body>
+    <main>
+        
+
+    <div class="header"><h1 > <img src="./images/images.png"width="60px" height="60px" >
+            TO-DO LIST</h1></div>
+    <div class="flex"><input type="text" id="intData" placeholder=" +  Add Here">
+    <button id="btn" onclick="addTask()">
+        
+ADD TASK
+    </button>
+    <button id="btn1"  onclick="setItem()">Set Task</button>
+                     <button id="btn2" onclick="getItem()">Get Task</button><br><br>
+    
+</div>
+
+
+<h2 id="heading"> </h2>
+
+
+
+    <div id="box">          
+
+    </div>
+    <!-- <div id="disp" ></div> -->
+  
+    </main>
+
+
+
+    <script>
+        let box=document.getElementById("box")
+        let intData=document.getElementById("intData")
+        let btn=document.getElementById("btn")
+
+        let arr=[]
+
+     function addTask(){
+        let todo=intData.value
+        arr.push(todo)
+        displayTodo()
+
+
+}
+function displayTodo(){
+    box.innerHTML=""
+     arr.forEach((ele, i) => {
+        box.innerHTML
+          += 
+          `
+        <div  class="task" > 
+            <div>
+
+                    ${ele}
+
+
+                </div>
+                <div class="bt"> 
+                    <button   class="bt1" onclick="upd(${i})">Update</button>
+                    
+                
+                    <button   class="bt2" onclick="del(${i})">Delete</button>
+
+                </div>
+                </div>
+
+ `
+   }
+
+);
+    
+}
+function del(i){
+    arr.splice(i,1);
+    displayTodo();
+
+}
+
+
+// function upd(i){
+//     let upd=prompt("enter updated task:",arr[i]);
+//     id (upd!== null &&upd.trim()!== "") {
+//         arr[i] =upd.trim();
+//         displayTodo();
+
+//     }
+
+    
+// }
+let heading = document.getElementById("heading")
+
+function setItem() {
+            console.log(intData.value);
+
+           localStorage.setItem("Data", JSON.stringify(intData.value))
+
+            
+        }
+ function getItem() {
+
+
+            
+            let a = JSON.parse(localStorage.getItem("Data"))
+            heading.innerText = a
+            heading.style.color="black"
+
+
+        }
+        
+
+
+
+
+function upd(i) {
+            let upd = prompt("Enter updated task:", arr[i]);
+
+            if (upd !== null && upd.trim() !== "") {
+                arr[i] = upd.trim();
+                displayTodo();
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>

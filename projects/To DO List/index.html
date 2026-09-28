@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       
+    }
+    body{
+         background-image: url(./images/top-view-red-pen-notepad-with-small-bow-pine-tree-branch-dark-red-surface-with-copy-place.jpg) ;
+        background-position: center center;
+        background-size: cover;
+        background-position-y: 0px;
+    }
+    input{
+padding: 15px 300px;
+border: 1px solid ;
+border-radius: 20px;
+font-size: medium;
+margin-top: 50px;
+    }
+.header img{
+position: relative;
+top: 15px;
+    }
+    .header{
+margin-left: 100px;
+margin-top: 30px;
+color: white;
+word-spacing: 15px;
+    }
+    button{
+        border: 1px solid ;
+        border-radius: 20px;
+        background-color: white;
+position: relative;
+top: 50px;
+        height: 50px;
+        width: 200px;
+    }
+    .flex{
+        display: flex;
+        gap: 50px;
+        margin-left: 100px;
+    }
+    #box{
+    margin-left: 100px;
+    margin-top: 50px;
+    width: 900px;
+}
+
+#box div{
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 850px;
+    height: 45px;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 30px;
+    background-color: rgb(255, 240, 153);
+    color: black;
+    font-weight: bolder;
+    border-color: transparent;
+
+}
+#btn{
+    background-color: green;
+    border-color: transparent;
+    color: white;
+    font-weight: bolder;
+}
+/* .button{
+    position: relative;
+    left: 1200px;
+    bottom: 400px;
+    margin-bottom: 200px;
+} */
+</style>
+</style>
+
+</head>
+<body>
+    <main>
+        
+
+    <div class="header"><h1 > <img src="./images/images.png"width="60px" height="60px" >
+            TO-DO LIST</h1></div>
+    <div class="flex"><input type="text" id="intData" placeholder=" +  Add Here"><br>
+    <button id="btn" onclick="addTask()">
+        
+ADD TASK
+    </button>
+    <button id="button" onclick="click()">
+        Delete
+    </button></div>
+    <div id="box"> 
+
+
+    </div>
+  
+    </main>
+
+
+
+    <script>
+        let box=document.getElementById("box")
+        let intData=document.getElementById("intData")
+        let btn=document.getElementById("btn")
+
+     function addTask(){
+        text=intData.value
+
+        let a=document.createTextNode(text)
+        console.log(a);
+    
+        let b=document.createElement("div")
+        console.log(b);
+    
+        let c=b.appendChild(a)
+        console.log(c);
+
+       box.appendChild(b)
+
+}
+
+
+
+
+
+    </script>
+
+</body>
+</html>
