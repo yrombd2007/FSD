@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="people"></div>
+    <div id="person">
+        <ul id="name"></ul>
+        <ul id="role"></ul>
+        <ul id="city"></ul>
+        <ul id="phone"></ul>
+    </div>
+    <script>
+        let people=[
+            {name:"om",role:"fsd",city:"ahm",phone:"9923324238"},
+             {
+                name: "Samina Hararwala",
+                role: "Full-Stack Developer",
+                city: "Ahmedabad",
+                phone: "9429560022"
+            }, {
+                name: "Mihir Panchal",
+                role: "Web Developer",
+                city: "Ahmedabad",
+                phone: "9876543210"
+            }
+        ];
+        let peopleDiv= document.getElementById("people");
+        people.forEach((person,index)=>{
+            peopleDiv.innerHTML+=`
+            <div class="person">
+                <h1>${person.name}</h1>
+                <button onclick="view(${index})">
+                    </button>
+                    </div>
+
+                `
+        })
+
+        const view=(index)=>{
+            let person= people[index];
+            document.getElementById("name").innerText="Name="+person.name;
+            document.getElementById("role").innerText="Name="+person.role;
+            document.getElementById("phone").innerText="Name="+person.phone;
+            document.getElementById("city").innerText="Name="+person.city;
+
+        }
+    </script>
+</body>
+</html>

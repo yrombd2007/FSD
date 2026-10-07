@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Team Directory</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #10de62;
+        }
+
+        .person {
+            background: rgb(57, 110, 224);
+            padding: 15px;
+            margin: 10px;
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        button {
+            background: #3d3fd1;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        #profile {
+            background: white;
+            padding: 20px;
+            margin: 20px 10px;
+            width: 300px;
+            border-radius: 10px;
+        }
+        .main{
+            display: flex;
+            gap: 500px;
+            margin-left: 100px;
+            margin-top: 50px;
+        }
+        .person{
+            display: flex;
+            justify-content: space-between;
+        }
+h1{
+    margin-top: 100px;
+}
+    </style>
+</head>
+
+<body>
+
+    <h1 style="margin-left: 1000px;">Team Profile</h1>
+<main class="main">
+
+    <div id="profile">
+        <h2>Profile</h2>
+        <p id="name">Select a person</p>
+        <p id="role"></p>
+        <p id="city"></p>
+        <p id="phone"></p>
+    </div>
+    <div id="people"></div>
+
+</main>
+    <script>
+
+        let people = [
+            {
+                name: "Mihir Panchal",
+                role: "Full-Stack Developer",
+                city: "Ahmedabad",
+                phone: "9429560022"
+            },
+            {
+                name: "Chal",
+                role: "ck Developer",
+                city: "Ahmead",
+                phone: "9460022"
+            },
+            {
+                name: "Om Badgujar",
+                role: "AI/ML Developer",
+                city: "Ahmedabad",
+                phone: "1234567890"
+            },
+            
+            {
+                name: "Samina Harawaalaaa",
+                role: "Web Developer",
+                city: "Ahmedabad",
+                phone: "9876543210"
+            }
+        ];
+
+        let peopleDiv = document.getElementById("people");
+
+        people.forEach((person, index) => {
+
+            peopleDiv.innerHTML += `
+                <div class="person">
+                    <h3>${person.name}</h3>
+
+
+                    <button onclick="viewProfile(${index})">
+                        View Profile
+                    </button>
+                </div>
+            `;
+
+        });
+
+
+
+            const viewProfile=(index)=>{
+
+            let person = people[index];
+
+            document.getElementById("name").innerText =
+                person.name;
+
+            document.getElementById("role").innerText =
+                "Role: " + person.role;
+
+            document.getElementById("city").innerText =
+                "City: " + person.city;
+
+            document.getElementById("phone").innerText =
+                "Phone: " + person.phone;
+        }
+
+    </script>
+
+</body>
+</html>
