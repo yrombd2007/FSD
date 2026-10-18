@@ -1,0 +1,252 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
+
+    <style>
+      #empty{
+        position: relative;
+        left: 100px;
+      }
+      #empty p{
+        font-size: 4ch;
+      }
+      #empty a{
+      position: relative;
+      left: 150px;
+      bottom: 50px;
+      }
+        .ccs-pillNav {
+            position: sticky;
+            top: 16px;
+            margin: auto;
+            width: fit-content;
+            display: flex;
+            gap: 8px;
+            padding: 8px;
+            border-radius: 18px;
+            border: 1px solid rgba(0,0,0,.10);
+            background: white;
+            box-shadow: 0 18px 40px rgba(0,0,0,.08);
+            z-index: 10;
+        }
+
+        .ccs-pillItem {
+            text-decoration: none;
+            color: black;
+            padding: 10px 14px;
+            border-radius: 14px;
+        }
+
+        .ccs-pillItem:hover {
+            background: rgba(20,127,255,.09);
+        }
+
+        .bill {
+            background-color: rgb(255, 249, 249);
+            width: 450px;
+            padding: 30px;
+            border: 1px solid #858282;
+            margin-top: 20px;
+        }
+
+        .scanner {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .bill{
+          margin-left: 850px;
+          position: fixed;
+          top: 200px;
+        }
+
+        .scanner img {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        #empty {
+            margin-top: 50px;
+            font-size: 28px;
+        }
+         #nav {
+          background-color: #1B1E4A;
+          padding-top: 18px;
+          padding-bottom: 18px;
+
+        }
+       
+        #nav i{
+          color: rgb(220, 224, 224);
+        }
+
+
+         #nav{
+          padding-top: 29px;
+          padding-bottom: 29px;
+        }
+    </style>
+</head>
+
+<body style="background-color: bisque;position: relative;
+bottom: 100px;">
+
+    <!-- Navbar stays visible -->
+    <nav id="nav" class="ccs-pillNav">
+        <a class="ccs-pillItem" href="./i.html">
+            <i class="fa-solid fa-house fa-lg"></i>
+        </a>
+
+        <a class="ccs-pillItem" href="./wishlist.html">
+            <i class="fa-solid fa-heart fa-lg"></i>
+        </a>
+
+        <a class="ccs-pillItem" href="./cart.html">
+            <i class="fa-solid fa-cart-shopping fa-lg"></i>
+        </a>
+
+        <a class="ccs-pillItem" href="./profile.html">
+            <i class="fa-solid fa-user fa-lg"></i>
+        </a>
+    </nav>
+
+    <div style="position: relative; bottom: 0px; left: 160px;top: 25px;">
+        <img src="./images/logo-removebg-preview.png" width="170" height="150">
+    </div>
+
+    <div class="container mt-4">
+
+        <h1 style="margin-top: 60px;">My Cart</h1>
+
+        <!-- Cart products -->
+        <div id="cartItems" class="d-flex flex-wrap gap-3"></div>
+
+        <!-- Bill section -->
+        <div id="placeorder"></div>
+
+        <!-- Scanner section -->
+        <div id="payment"></div>
+
+    </div>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        let display = document.getElementById("cartItems");
+        let placeorder = document.getElementById("placeorder");
+        let payment = document.getElementById("payment");
+
+        let totalamount = 0;
+
+        function showCart() {
+            display.innerHTML = "";
+
+            if (cart.length == 0) {
+                display.innerHTML = `
+                    <div id="empty">
+                        <p>Your Cart is Empty</p>
+                        <br>
+                        <a href="./wishlist.html" class="btn btn-success mt-3">
+                            Add Items from Wishlist
+                        </a>
+                    </div>
+                `;
+                return;
+            }
+
+            cart.forEach(function(product, i) {
+                display.innerHTML += `
+                    <div class="card p-3" style="width: 50rem;">
+                        <img src="${product.image}"
+                             style="height: 180px; object-fit: contain;">
+
+                        <h5 class="mt-3">${product.title}</h5>
+
+                        <p>${product.description || ""}</p>
+
+                        <h6>Price: $${product.price}</h6>
+
+                        <button class="btn btn-danger"
+                                onclick="del(${i})">
+                            Delete
+                        </button>
+                    </div>
+                `;
+            });
+        }
+
+        function del(i) {
+            cart.splice(i, 1);
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            showCart();
+            checkCart();
+        }
+
+        function checkCart() {
+            if (cart.length > 0) {
+                let total = 0;
+
+                cart.forEach(function(product) {
+                    total = total + Number(product.price);
+                });
+
+                let platformfee = 10;
+                let discount = total * 10 / 100;
+
+                totalamount = total + platformfee - discount;
+
+                placeorder.innerHTML = `
+                    <div class="bill">
+                        <h4>Total MRP: $${total.toFixed(2)}</h4>
+                        <h4>Discount: -$${discount.toFixed(2)}</h4>
+                        <h4>Platform Fee: $${platformfee.toFixed(2)}</h4>
+                        <hr>
+                        <h3>Total Amount: $${totalamount.toFixed(2)}</h3>
+
+                        <button class="btn btn-success mt-3"
+                                onclick="pay()">
+                            Place Order
+                        </button>
+                    </div>
+                `;
+            } else {
+                placeorder.innerHTML = "";
+            }
+        }
+
+        function pay() {
+            // Hide all products and the bill
+            display.innerHTML = "";
+            placeorder.innerHTML = "";
+
+            // Show the scanner
+            payment.innerHTML = `
+                <div class="scanner">
+                    <h2>Scan to Pay</h2>
+
+                    <img src="./images/Screenshot 2026-10-14 at 2.05.28 PM.png"
+                         alt="Payment QR Code">
+
+                    <h3 class="mt-3">
+                        Pay: $${totalamount.toFixed(2)}
+                    </h3>
+                </div>
+            `;
+        }
+
+        showCart();
+        checkCart();
+    </script>
+
+</body>
+</html>
+```
